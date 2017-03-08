@@ -1,0 +1,9 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}AppBundle:Task:index{% endblock %}
+
+{% block body %}
+{%for l in list%}
+    {{l.task}}----{{l.dueDate|date('Y-m-d')}}<br>
+{% endfor %}
+{% endblock %}

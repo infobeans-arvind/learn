@@ -1,0 +1,48 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}AppBundle:Learn:index{% endblock %}
+
+{% block body %}
+    {% if errors is defined %}
+    <h3>The product has the following errors</h3>
+    <ul>
+    {% for error in errors %}
+        <li>{{ error.message }}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    {%if product.id is defined %}
+    
+    <form method="post" action="{{path('index_edit',{'id':product.id})}}" >
+        
+        <input type="text" name="name" placeholder="name" value="{{product.name}}"><br>
+        <input type="text" name="price" placeholder="price" value="{{product.price}}"><br>
+        <input type="text" name="quantity" placeholder="quantity" value="{{product.quantity}}"><br>
+        <select name="category">
+            <option value="">Select Category</option>
+            {%for category in categories %}
+                <option value="{{category.id}}" {% if product.category.id == category.id %} selected="selected"{% endif %}>{{category.name}}</option>
+            {% endfor %}
+        </select><br>
+        <input type="submit" name="submit" value="submit"><br>
+        <a href="{{path('list')}}">List view</a> | <a href="{{path('index')}}">Add new</a>
+    </form>
+    {% else%}
+        <form method="post" action="{{path('index')}}" >
+
+            <input type="text" name="name" placeholder="name" value=""><br>
+            <input type="text" name="price" placeholder="price" value=""><br>
+            <input type="text" name="quantity" placeholder="quantity" value=""><br>
+            <select name="category">
+                <option value="">Select Category</option>
+                {% if categories is defined  %}
+                {%for category in categories %}
+                    <option value="{{category.id}}">{{category.name}}</option>
+                {% endfor %}
+                {% endif %}
+            </select><br>
+            <input type="submit" name="submit" value="submit"><br>
+            <a href="{{path('list')}}">List view</a> 
+        </form>
+    {% endif %}
+{% endblock %}

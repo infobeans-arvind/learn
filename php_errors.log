@@ -1,0 +1,12 @@
+[08-Mar-2017 12:56:49 Asia/Calcutta] PHP Fatal error:  Call to undefined function Deployer\add() in /var/www/html/learn/deploy.php on line 12
+[08-Mar-2017 12:59:44 Asia/Calcutta] PHP Fatal error:  Call to undefined function Deployer\add() in /var/www/html/learn/deploy.php on line 12
+[08-Mar-2017 12:59:45 Asia/Calcutta] PHP Fatal error:  Call to undefined function Deployer\add() in /var/www/html/learn/deploy.php on line 12
+[08-Mar-2017 13:00:03 Asia/Calcutta] PHP Fatal error:  Call to undefined function Deployer\add() in /var/www/html/learn/deploy.php on line 12
+[08-Mar-2017 13:01:42 Asia/Calcutta] PHP Fatal error:  Call to undefined function Deployer\add() in /var/www/html/learn/deploy.php on line 12
+[08-Mar-2017 13:03:45 Asia/Calcutta] PHP Fatal error:  Call to undefined function Deployer\add() in /var/www/html/learn/deploy.php on line 12
+[08-Mar-2017 13:53:44 Asia/Calcutta] PHP Fatal error:  Call to undefined function Deployer\add() in /var/www/html/learn/deploy.php on line 12
+[08-Mar-2017 13:54:25 Asia/Calcutta] PHP Fatal error:  Call to undefined method Deployer\Server\Builder::set() in /var/www/html/learn/deploy.php on line 22
+[08-Mar-2017 13:55:10 Asia/Calcutta] PHP Fatal error:  Call to undefined method Deployer\Server\Builder::set() in /var/www/html/learn/deploy.php on line 22
+[08-Mar-2017 13:59:18 Asia/Calcutta] PHP Fatal error:  Call to undefined function Deployer\add() in /var/www/html/learn/deploy.php on line 12
+[08-Mar-2017 14:03:15 Asia/Calcutta] PHP Warning:  require_once(/var/www/html/learn/common.php): failed to open stream: No such file or directory in /var/www/html/learn/deploy.php on line 8
+[08-Mar-2017 14:03:15 Asia/Calcutta] PHP Fatal error:  require_once(): Failed opening required '/var/www/html/learn/common.php' (include_path='/var/www/html/learn/vendor/deployer/deployer:.:/usr/share/php:/usr/share/pear') in /var/www/html/learn/deploy.php on line 8

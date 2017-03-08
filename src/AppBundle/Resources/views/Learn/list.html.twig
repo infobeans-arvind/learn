@@ -1,0 +1,12 @@
+<table>
+    <tr>
+        <th>Name</th><th>Category</th><th>Price</th><th>Quantity</th><th>Created Date</th><th>Action</th>
+    </tr>
+    
+    {% for l in list %}
+    <tr>
+        <td>{{custom_date(l.name)}}</td><td>{{l.category.name}}</td><td>{{l.price}}</td><td>{{l.quantity}}</td><td>{{l.createdDate|date("m/d/Y")}}</td><td><a href="{{path('index_edit',{id:l.id})}}">Edit</a>|<a href="{{path('delete',{id:l.id})}}">Delete</a></td>
+    </tr>
+    {% endfor %}
+    <a href="{{path('index')}}">Add</a>
+</table>

@@ -1,0 +1,40 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Blog</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Fname</th>
+                <td>{{ entity.fname }}</td>
+            </tr>
+            <tr>
+                <th>Lname</th>
+                <td>{{ entity.lname }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ entity.date|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('blog') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('blog_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}
